@@ -8,11 +8,11 @@ import MicOffIcon from '@mui/icons-material/MicOff';
 import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
 
 
-import { YOUTUBE_SUGGESTION_API } from '../utils/constants'
+// import { YOUTUBE_SUGGESTION_API } from '../utils/constants'
 const SearchBar = () => {
   const [searchQuery, setsearchQuery] = useState("");
   const [voiceAssistant, setvoiceAssistant] = useState(true);
-  const YOUR_API_KEY = "AIzaSyDGYgC4KDAWA4SF10PLc9hdZ0a9SnEh23Y";
+ 
   const navigate =useNavigate();
   
   const startListening = ()=>{
@@ -26,7 +26,7 @@ const SearchBar = () => {
       });
   }
   };
-  const { transcript, resetTranscript, browserSupportsSpeechRecognition } =useSpeechRecognition();
+  const { transcript, resetTranscript } =useSpeechRecognition();
 
   const changeurlhandler = ()=>{
     navigate("/search?s="+searchQuery);

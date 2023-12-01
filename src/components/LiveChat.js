@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Avatar, Box, Button, TextField, Typography, useTheme } from "@mui/material";
+import { Avatar, Box, Button, TextField, useTheme } from "@mui/material";
 import { Scrollbar } from "react-scrollbars-custom";
 import { generateRandomCompliment, generateRandomId, generateRandomName } from '../utils/helper';
 import { addmessage } from '../utils/chatSlice';

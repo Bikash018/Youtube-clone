@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Typography, Box } from "@mui/material";
+import {Typography, Box } from "@mui/material";
 import { FaUserCircle } from "react-icons/fa";
 
 const ChatMessageCard = ({ name, message }) => {

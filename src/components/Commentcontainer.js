@@ -1,4 +1,4 @@
-import { Paper } from '@mui/material';
+
 import React from 'react'
 import CommentsList from './CommentsList';
 import { commentsList } from '../utils/constants';
