@@ -64,17 +64,29 @@ const SearchFeed = () => {
   console.log(searchQuery);
   const [searchVideos, setsearchVideos] = useState([]);
  const YOUR_API_KEY = "AIzaSyAIi8VgLmgWhKlLLLRkRAGWCco6Nj2nY_I";
+
+//  n
   
- useEffect(()=>{
-    getResults();
-
-  },[searchQuery])
-
-  const getResults= async ()=>{
-      const data = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${YOUR_API_KEY}`)
+useEffect(() => {
+  const getResults = async () => {
+    try {
+      const data = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${YOUR_API_KEY}`);
       const json = await data.json();
-      setsearchVideos(json.items);
-  }
+      setsearchVideos(json.items || []);
+    } catch (error) {
+      console.error('Error fetching search results:', error);
+      setsearchVideos([]);
+    }
+  };
+
+  getResults();
+}, [searchQuery]);
+
+  // const getResults= async ()=>{
+  //     const data = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchQuery}&key=${YOUR_API_KEY}`)
+  //     const json = await data.json();
+  //     setsearchVideos(json.items);
+  // }
   console.log(searchVideos);
   
 
