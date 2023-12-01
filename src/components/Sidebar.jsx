@@ -1,9 +1,9 @@
 import React from 'react'
-import { Stack, autocompleteClasses } from '@mui/material';
+import { Stack } from '@mui/material';
 import { categories } from '../utils/constants';
 
 const selectedCategory='New';
-const Sidebar = () =>  (
+const Sidebar = () =>  (    
     <Stack
     direction="row"
     sx={{
