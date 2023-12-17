@@ -157,7 +157,7 @@ export const commentsList = [
       ]
   },
   {
-      name : 'John Doe',
+      name : 'Jon Doe',
       comment : ' lorem ipsum dolor sit amet',
       replies:[]
   },
